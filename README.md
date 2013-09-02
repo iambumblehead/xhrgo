@@ -63,7 +63,7 @@ The same parameters are used for each method:
    The first two parameters are required. Data is sent and received in the JSON format. Data is passed to and returned from the method in the form of an object.
  
    ```javascript
-   xhrgo.JSON("POST", /hi, {hi:'b'}, null, function (err, res) {
+   xhrgo.JSON('POST', '/hi', {hi:'b'}, null, function (err, res) {
      if (err) return fn(new Error(err));     
      fn(null, res);
    }, 1000);
