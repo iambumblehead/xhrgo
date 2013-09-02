@@ -4,11 +4,12 @@ xhrgo
 
 ### OVERVIEW:
 
-Simple/dumb `xhr` object for sending requests. xhrgo is not a comprehensive solution for xhr usage. It's perfect for the most common type of request using non-chunked json, html and form-urlencoded data formats. It assumes there is one 'success' response, `200`.
+Simple/dumb `xhr` object for sending requests. xhrgo is not a comprehensive solution for xhr usage. It's perfect for the most common type of request using non-chunked json, html and [form-urlencoded][3] data formats. It assumes there is one 'success' response, `200`.
 
 xhrgo uses the node.js callback convention.
 
 [0]: http://www.bumblehead.com                            "bumblehead"
+[3]: https://npmjs.org/package/form-urlencoded    "www-urlformencoded"
 
 ------------------------------------------------------------------------------
 #### <a id="install"></a>INSTALL:
