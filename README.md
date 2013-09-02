@@ -49,11 +49,11 @@ xhrgo may be downloaded directly or installed through `npm`.
 
 The same parameters are used for each method:
 
- - **_type_**, REST type such as 'PUT', 'POST', 'DELETE', 'GET'. 
- - **_url_** 
- - **_data_**, object to be stringified and sent with PUT and POST requests. 
- - **_token_** authorization token. 
- - **_fn_** callback function used in the node.js convention -error is passed as the first parameter. 
+ - **_type_**, REST type such as 'PUT', 'POST', 'DELETE', 'GET'.
+ - **_url_**
+ - **_data_**, object to be stringified and sent with PUT and POST requests.
+ - **_token_** authorization token.
+ - **_fn_** callback function used in the node.js convention -error is passed as the first parameter.
  - **_time_** number value in milliseconds -it is used with `setTimeout` to cancel a request that has not received a response during that timespan.
 
 
