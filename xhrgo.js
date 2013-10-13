@@ -1,5 +1,5 @@
 // Filename: xhrgo.js
-// Timestamp: 2013.09.01-21:10:43 (last modified)  
+// Timestamp: 2013.10.12-21:02:19 (last modified)  
 // Author(s): Bumblehead (www.bumblehead.com), Joax
 // Requires: 
 
@@ -161,14 +161,7 @@ var xhrgo = ((typeof module === 'object') ? module : {}).exports = (function (xh
         }
       }
 
-      if (xhr.status === 200) {
-        doneFn(null, res);
-      } else {
-        doneFn(xhr, res);
-      }
-
-      err = (xhr.status === 200) ? null : xhr;
-      doneFn(null, res);
+      doneFn((xhr.status === 200) ? null : xhr, res);
     });
 
     xhr.send(finData);
