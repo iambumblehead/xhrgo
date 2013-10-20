@@ -1,5 +1,5 @@
 // Filename: xhrgo.js
-// Timestamp: 2013.10.12-21:02:19 (last modified)  
+// Timestamp: 2013.10.20-10:45:14 (last modified)  
 // Author(s): Bumblehead (www.bumblehead.com), Joax
 // Requires: 
 
@@ -138,6 +138,7 @@ var xhrgo = ((typeof module === 'object') ? module : {}).exports = (function (xh
 
     xhr.open(type, fullUri, true);
 
+    xhr.setRequestHeader("Content-Type", "application/json");
     xhr.setRequestHeader("Accept", "application/json, text/javascript");
     if (type.match(/PUT|POST/) && typeof data === 'object' && data) {
       finData = JSON.stringify(data);
