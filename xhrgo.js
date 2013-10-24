@@ -1,6 +1,6 @@
 // Filename: xhrgo.js
-// Timestamp: 2013.10.20-10:45:14 (last modified)  
-// Author(s): Bumblehead (www.bumblehead.com), Joax
+// Timestamp: 2013.10.24-16:32:21 (last modified)  
+// Author(s): Bumblehead (www.bumblehead.com)
 // Requires: 
 
 // HTTP
