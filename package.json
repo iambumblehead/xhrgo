@@ -1,6 +1,6 @@
 {
   "name": "xhrgo",
-  "version": "0.0.05",
+  "version": "0.0.06",
   "license" : "MIT",
   "repository": {
     "type": "git",
@@ -14,7 +14,6 @@
     "json"
   ],
   "dependencies": {
-     "parseUri" : ">=0.0.0"
   },
   "devDependencies": {
     "compareobj": ">=0.0.3",
