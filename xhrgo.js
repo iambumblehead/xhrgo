@@ -40,7 +40,7 @@ var xhrgo = ((typeof module === 'object') ? module : {}).exports = (function (xh
     var key, val, arg, x, args, uriVals = {};
     
     uriVals.vanillaUri = uri.replace(/\?.*/, '');
-    uriVals.hash = uri.replace(/.*#/, '');
+    uriVals.hash = uri.replace(/[^#]*#?/, '');
 
     uri = uri.replace(/#.*$/, ''); // remove hash
     
