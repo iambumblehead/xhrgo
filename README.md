@@ -31,12 +31,12 @@ $ npm test
 
 The same parameters are used for each method:
 
-**_type_**, REST type such as 'PUT', 'POST', 'DELETE', 'GET'.
-**_url_**, the url at which the request is made
-**_data_**, object to be stringified and sent with PUT and POST requests
-**_token_** authorization token
-**_fn_** callback function using node.js convention, passes err as first parameter
-**_time_** number in milliseconds used with `setTimeout` to wait for a response
+ * **_type_**, REST type such as 'PUT', 'POST', 'DELETE', 'GET'.
+ * **_url_**, the url at which the request is made
+ * **_data_**, object to be stringified and sent with PUT and POST requests
+ * **_token_** authorization token
+ * **_fn_** callback function using node.js convention, passes err as first parameter
+ * **_time_** number in milliseconds used with `setTimeout` to wait for a response
 
 
 1. **xhrgo.quickJSON( _type_, _url_, _data_, _token_, _fn_, _time_ )**
