@@ -17,7 +17,7 @@ xhrgo uses the node.js callback convention.
 xhrgo may be downloaded directly or installed through `npm`.
 
 ```bash
-$ npm install form-urlencoded
+$ npm install xhrgo
 ```
 
 to run tests, use `npm test` from a shell.
