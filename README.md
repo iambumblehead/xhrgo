@@ -27,7 +27,7 @@ $ npm test
 ```
  
 ---------------------------------------------------------
-#### <a id="usage">usage
+#### <a id="usage"></a>usage
 
 The same parameters are used for each method:
 
