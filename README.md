@@ -89,10 +89,7 @@ The same parameters are used for each method:
 
 8. **xhrgo.getArgsObjAsUriStr( _argsObj_ )**
 
-   Top-level properties of the object are returned as a key/value string. Each value is encoded. The keys are joined in alphabetical order. 
-
-   For more comprehensive object serialization use [url-formencoded][2].
-
+   Top-level properties of the object are returned as a key/value string. Each value is encoded. The keys are joined in alphabetical order. For more comprehensive object serialization use [url-formencoded][2].
    ```javascript
    xhrgo.getArgsObjAsUriStr({
      modified : 137798840249,
