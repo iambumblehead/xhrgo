@@ -31,19 +31,16 @@ $ npm test
 
 The same parameters are used for each method:
 
-  * **_type_**, REST type such as 'PUT', 'POST', 'DELETE', 'GET'.
-  * **_url_**, the url at which the request is made
-  * **_data_**, object to be stringified and sent with PUT and POST requests
-  * **_token_** authorization token
-  * **_fn_** callback function using node.js convention, passes err as first parameter
-  * **_time_** number in milliseconds used with `setTimeout` to wait for a response
+**_type_**, REST type such as 'PUT', 'POST', 'DELETE', 'GET'.
+**_url_**, the url at which the request is made
+**_data_**, object to be stringified and sent with PUT and POST requests
+**_token_** authorization token
+**_fn_** callback function using node.js convention, passes err as first parameter
+**_time_** number in milliseconds used with `setTimeout` to wait for a response
 
-Methods
 
- * **xhrgo.quickJSON( _type_, _url_, _data_, _token_, _fn_, _time_ )**
- 
+ 1. **xhrgo.quickJSON( _type_, _url_, _data_, _token_, _fn_, _time_ )**
    The first two parameters are required. Data is sent and received in JSON format but is passed to and returned from the method as an object.
- 
    ```javascript
    xhrgo.quickJSON('POST', '/hi', {hi:'b'}, null, function (err, res) {
      if (err) return fn(new Error(err));
@@ -51,49 +48,39 @@ Methods
    }, 1000);
    ```
 
- * **xhrgo.quickJSONU( _type_, _url_, _data_, _token_, _fn_, _time_ )**
-
+ 2. **xhrgo.quickJSONU( _type_, _url_, _data_, _token_, _fn_, _time_ )**
    Calls `xhrgo.quickJSON`, adding a unique parameter to the url to avoid cached responses.
 
- * **xhrgo.getTextHTML( _url_, _fn_, _time_ )**
- 
+ 3. **xhrgo.getTextHTML( _url_, _fn_, _time_ )**
    Makes 'GET' requests with "Content-Type" "text/html". Useful for requesting static template and text files.
-
    ```javascript
    xhrgo.getTextHTML(htmlUrl, function (err, template) {
      if (err) return fn(new Error('failed load html: ' + htmlUrl));
      fn(null, template);
    });
    ```
-   
- * **xhrgo.getTextHTMLU( _url_, _fn_, _time_ )**
 
+ 4. **xhrgo.getTextHTMLU( _url_, _fn_, _time_ )**
    Calls `xhrgo.getTextHTML`, adding a unique parameter to the url to avoid cached responses.
 
- * **xhrgo.newRequest( )**
- 
+ 5. **xhrgo.newRequest( )**
    Returns a browser-supported xhr object. The value returned is usually `new XMLHttpRequest()`
 
- * **xhrgo.getUriAsUnique( _url_ )**
- 
+ 6. **xhrgo.getUriAsUnique( _url_ )**
    Returns a new url with a unique parameter added.
-
    ```javascript
    xhrgo.getUriAsUnique('/a.html'); // "/a.html?uid=1377988402490"
    ```
 
- * **xhrgo.addKeyVal( _url_, _k_, _v_ )**
- 
+ 7. **xhrgo.addKeyVal( _url_, _k_, _v_ )**
    Returns a new url with key/val parameters added.
-   
    ```javascript
    var url = '/resource';
    url = xhrgo.addKeyVal(url, 'a', '1'); // "/resource?a=1"
    url = xhrgo.addKeyVal(url, 'b', '2'); // "/resource?a=1&b=2"
    ```
 
- * **xhrgo.getArgsObjAsUriStr( _argsObj_ )**
- 
+ 8. **xhrgo.getArgsObjAsUriStr( _argsObj_ )**
    Top-level properties of the object are returned as a key/value string. Each value is encoded. The keys are joined in alphabetical order. 
 
    For more comprehensive object serialization use [url-formencoded][2].
@@ -106,10 +93,8 @@ Methods
    // "currency=usd&modifed=137798840249"
    ```
 
- * **xhrgo.getUriStrAsArgsObj( _uriStr_ )**
- 
+ 9. **xhrgo.getUriStrAsArgsObj( _uriStr_ )**
    Retuns an object with properties named and defined with values from the url. `vanillaUri` and `hash` are always named properties on the object returned.
-
    ```javascript
    xhrgo.getUriStrAsArgsObj(
      "/resource/currency=usd&time=137798840249#hashvalue"
@@ -121,6 +106,7 @@ Methods
    //   currency : 'usd'
    // }
    ```
+
 
 [2]: http://github.com/iambumblehead/url-formencoded     "formencoded"
 
