@@ -111,13 +111,15 @@ var xhrgo = ((typeof module === 'object') ? module : {}).exports = (function (xh
     };
   };
 
+  xhrgo.is2xxRe = /2\d\d/;
+
   xhrgo.getTextHTML = function (tpl, fn) {
     var xhr = xhrgo.newRequest();
 
     xhr.open("GET", tpl, true);
 
     xhr.onreadystatechange = xhrgo.constructReadyState(xhr, function (xhr) {
-      if (xhr.status === 200) {
+      if (xhrgo.is2xxRe.test(xhr.status)) {
         fn(null, xhr.responseText);
       } else {
         fn(xhr);
@@ -162,7 +164,7 @@ var xhrgo = ((typeof module === 'object') ? module : {}).exports = (function (xh
         }
       }
 
-      doneFn((xhr.status === 200) ? null : xhr, res);
+      doneFn((xhrgo.is2xxRe.test(xhr.status)) ? null : xhr, res);
     });
 
     xhr.send(finData);
