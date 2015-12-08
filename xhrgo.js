@@ -9,7 +9,7 @@
 // library and so each of them is added here
 
 
-var xhrgo = ((typeof module === 'object') ? module : {}).exports = (function (xhrgo) {
+var xhrgo = module.exports = (function (xhrgo) {
 
   xhrgo.factories = [
     function () { return new ActiveXObject("Microsoft.XMLHTTP"); },
